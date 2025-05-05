@@ -397,7 +397,7 @@ function searchPDFs() {
                 data.files.forEach(file => {
                     const pdfLink = document.createElement('a');
                     pdfLink.href = `https://matura-ewh3.onrender.com${file.fileUrl}`; // Ensure full URL to the file
-                    pdfLink.textContent = file.fileName.split('\\').pop(); // Extract file name from path
+                    pdfLink.textContent = file.fileName.split('/').pop(); // Extract file name from path
                     pdfLink.target = '_blank'; // Open in a new tab
                     pdfLink.className = 'pdf-link';
                     pdfContainer.appendChild(pdfLink);
